@@ -88,16 +88,12 @@ public class LinaProgramacion {
                                 String npr = nuevoPropio.convertirPropio(tx);
                                 JOptionPane.showMessageDialog(null,"Su texto cambio de : "+ tx +" a "+npr, "Nombre Propio", 1);
                                 break;
-                            default:
-                                JOptionPane.showMessageDialog(null, "Opcion incorrecta, ingrese la opcion nuevamnete", "error", 0);
                         }
                         break;
                     case 2:
                         JOptionPane.showMessageDialog(null,"Salite del  modulo", "Salida", 1);                                    
                     break;
-                    default:
-                        JOptionPane.showMessageDialog(null, "Opcion incorrecta, ingrese la opcion nuevamnete", "error", 0);
-                    }
+                }
                 ventanafin = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea continuar \n 1. SI \n 2. NO", "continuar", 1));
                 }while(ventanafin == 1);
 
