@@ -15,6 +15,10 @@ public class NumeroMagico {
     
 private int num;
 
+    public NumeroMagico(int nm) {
+        num = nm;
+    }
+
     public boolean siMagico(int num) {
         int sumDigitos= 0;
         int numInicial = num;
@@ -29,21 +33,13 @@ private int num;
     }
     
     public int digitos(int num) {
-        int ndigitos = 0;
+        int suma = 0;
         while (num != 0) {
+            int digito = num % 10;
+            suma += digito;
             num /= 10;
-            ndigitos++;
         }
-        return ndigitos;
-    }
-    
-    public void Validacion (){
-        int num2 = num;
-        if (siMagico(num)) {
-            JOptionPane.showMessageDialog(null,num2 + " es un número mágico.", "Es Magicó?", 1);
-        } else {
-            JOptionPane.showMessageDialog(null,num2 + "no es un número mágico.", "Es Magicó?", 1);
-        }
-    }
 
+        return suma;
+    }
 }
